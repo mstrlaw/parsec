@@ -1,7 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import PageTitle from '../../components/PageTitle.astro'
+
+const title = 'Project Overview'
 ---
 
-<Layout title="Project Overview">
-  <h1 class="text-2xl font-bold text-grey-900">Project Overview</h1>
+<Layout title={title}>
+  <PageTitle title={title} />
 </Layout>
