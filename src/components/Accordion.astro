@@ -1,0 +1,58 @@
+---
+import { Icon } from 'astro-icon/components'
+
+interface AccordionItem {
+  title: string
+  content: string
+}
+
+interface Props {
+  items: AccordionItem[]
+}
+
+const { items } = Astro.props
+---
+
+<div class="accordion space-y-2">
+  {
+    items.map((item, index) => (
+      <div class="accordion-item border border-gray-200 rounded-lg overflow-hidden">
+        <button
+          type="button"
+          class="accordion-trigger w-full flex items-center justify-between px-4 py-3 text-left text-lg font-medium text-gray-900 bg-slate-50 hover:bg-slate-200 hover:cursor-pointer transition-colors"
+          aria-expanded="false"
+          aria-controls={`accordion-content-${index}`}
+        >
+          <span>{item.title}</span>
+          <Icon
+            name="caret"
+            class:list={
+              'accordion-icon text-3xl text-gray-500 transition-transform duration-200'
+            }
+            style={'transform:rotate(180deg);'}
+          />
+        </button>
+        <div
+          id={`accordion-content-${index}`}
+          class="accordion-content hidden px-4 py-3 text-gray-700 bg-white"
+        >
+          {item.content}
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script>
+  document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+      const content = trigger.nextElementSibling as HTMLElement
+      const icon = trigger.querySelector('.accordion-icon') as HTMLElement
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true'
+
+      trigger.setAttribute('aria-expanded', String(!isExpanded))
+      content.classList.toggle('hidden')
+      icon.style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)'
+    })
+  })
+</script>

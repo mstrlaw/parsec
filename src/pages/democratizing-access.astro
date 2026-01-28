@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro'
+import PageTitle from '../components/PageTitle.astro'
+import Accordion from '../components/Accordion.astro'
+import { Icon } from 'astro-icon/components'
+
+const title = 'Democratizing Access Control'
+
+const researchAreas = [
+  {
+    title: 'Decentralized Access Control',
+    content:
+      'Exploring blockchain and distributed ledger technologies for transparent and tamper-resistant access control systems.',
+  },
+  {
+    title: 'Human-Centered Design',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, autem enim numquam odio deserunt totam, quasi fuga blanditiis magni quis atque iste praesentium hic, laborum esse dolore nostrum sequi tempore!',
+  },
+  {
+    title: 'Policy & Governance',
+    content:
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, autem enim numquam odio deserunt totam, quasi fuga blanditiis magni quis atque iste praesentium hic, laborum esse dolore nostrum sequi tempore!',
+  },
+]
+---
+
+<Layout title={title}>
+  <PageTitle title={title} />
+  <h2 class="text-xl font-semibold mt-8 mb-2">
+    What Does Democratizing Access Mean?
+  </h2>
+  <p class="text-lg mb-12">
+    Democratizing access control involves making access systems more
+    transparent, participatory, and fair — ensuring that control over digital
+    and physical spaces is distributed fairly among stakeholders.
+  </p>
+  <section class="my-12 py-8 flex flex-wrap">
+    <div class="w-full md:w-1/3 text-center px-8 my-6">
+      <Icon name="eye" class:list={'text-6xl mx-auto text-slate-600'} />
+      <h3 class="text-2xl mb-2">Transparency</h3>
+      <p>
+        Ensure all access control decisions and actions are logged and
+        auditable.
+      </p>
+    </div>
+    <div class="w-full md:w-1/3 text-center px-8 my-6">
+      <Icon name="people" class:list={'text-6xl mx-auto text-slate-600'} />
+      <h3 class="text-2xl mb-2">Participation</h3>
+      <p>Stakeholders have a voice in access control decisions</p>
+    </div>
+    <div class="w-full md:w-1/3 text-center px-8 my-6">
+      <Icon name="scale" class:list={'text-6xl mx-auto text-slate-600'} />
+      <h3 class="text-2xl mb-2">Fairness</h3>
+      <p>Fair distribution of access rights across different participants</p>
+    </div>
+  </section>
+
+  <section class="my-12 py-8">
+    <h3 class="text-xl font-semibold mt-8 mb-4">Our Research Focus Areas</h3>
+    <Accordion items={researchAreas} />
+  </section>
+  <section
+    class="hero py-10 px-6 mt-12 bg-linear-25 from-slate-600 to-slate-950 rounded-2xl text-gray-50 text-center"
+  >
+    <h2 class="text-xl font-semibold">Interested in our Research?</h2>
+    <p class="my-6">
+      We welcome collaboration with researchers, practitioners, and
+      organizations.
+    </p>
+    <br />
+    <div class="flex justify-center">
+      <a
+        href="/team"
+        class="bg-slate-300 hover:bg-slate-400 hover:cursor-pointer text-black font-bold py-2 px-4 rounded mx-4"
+      >
+        Meet the team
+      </a>
+      <a
+        href="/project"
+        class="bg-slate-300 hover:bg-slate-400 hover:cursor-pointer text-black font-bold py-2 px-4 rounded mx-4"
+      >
+        Project Overview
+      </a>
+    </div>
+  </section>
+</Layout>
