@@ -1,10 +1,86 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import PageTitle from '../../components/PageTitle.astro'
+import { Icon } from 'astro-icon/components'
 
 const title = 'Project Overview'
 ---
 
 <Layout title={title}>
   <PageTitle title={title} />
+  <p class="text-lg mb-10">
+    In democratic institutions and organizations, decision-making power is
+    spread amongst the members.
+    <br />
+    However, executive power often ends up in the hands of a few digital vanguards
+    or those with the technical know-how to work the technology of the organization.
+    <br />
+    If these digital vanguards were to go rogue, they could use their power to harm
+    the organization itself.
+    <br /><br />
+    Consider the case of Parliament.
+    <br />
+    Networks in Parliament are run by administrators who may support a particular
+    party. If these admins were to go rogue, national secrets or fair elections may
+    be at risk.
+    <br />
+    <br />
+    This academic research project investigates novel approaches to access control
+    systems, focusing on democratization, transparency, and distributed decision making.
+    <br />
+    It seeks to protect democratic institutions and organizations from potential rogue
+    insiders.
+  </p>
+  <section
+    class="hero py-6 px-8 my-6 bg-linear-25 from-slate-300 to-slate-500 rounded-2xl"
+  >
+    <h2 class="text-xl font-semibold">Research Objectives</h2>
+    <ul class="mt-4">
+      <li class="flex items-center text-lg mb-3">
+        <Icon name="logo" class={'mr-2 text-slate-900'} />
+        Analyze current access control models and their susceptibility to malicious
+        insider attacks
+      </li>
+      <li class="flex items-center text-lg mb-3">
+        <Icon name="logo" class={'mr-2 text-slate-900'} />Develop access control
+        models based on participatory vote
+      </li>
+      <li class="flex items-center text-lg mb-3">
+        <Icon name="logo" class={'mr-2 text-slate-900'} />Investigate the impact
+        of reputation on voting procedures
+      </li>
+      <li class="flex items-center text-lg mb-3">
+        <Icon name="logo" class={'mr-2 text-slate-900'} />Determine the
+        usability of voting-based access control models
+      </li>
+    </ul>
+  </section>
+
+  <section class="flex flex-wrap py-6 my-6">
+    <div class="w-full md:w-1/2">
+      <div class="px-8 py-6 mt-6 md:mr-4 bg-slate-100 rounded-2xl">
+        <div class="flex items-center mb-4">
+          <Icon name="flask" class={'text-xl mr-2 text-slate-900'} />
+          <h2 class="text-xl font-semibold">Methodology</h2>
+        </div>
+        <p class="text-lg">
+          Our research employs mixed methods including technical analysis, case
+          studies, stakeholder interviews, and system design and implementation.
+        </p>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <div class="px-8 py-6 mt-6 md:ml-4 bg-slate-100 rounded-2xl">
+        <div class="flex items-center mb-4">
+          <Icon name="timeline" class={'text-xl mr-2 text-slate-900'} />
+          <h2 class="text-xl font-semibold">Timeline</h2>
+        </div>
+        <p class="text-lg">
+          The project spans 10 months, divided into five phases: literature
+          review, security proofs, system development, usability testing, and
+          dissemination.
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
