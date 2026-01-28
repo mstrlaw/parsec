@@ -1,0 +1,77 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<footer
+  id="contact"
+  class="w-full py-12 px-4 mt-12 border-t border-gray-200 bg-white"
+  role="contentinfo"
+>
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">ParSec</h2>
+        <p class="text-gray-600">
+          This project is part of academic research at NOVA LINCS and NOVA
+          School of Science and Technology.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Links</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/project"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              aria-current={Astro.url.pathname === '/project'
+                ? 'page'
+                : undefined}
+            >
+              Project Overview
+            </a>
+          </li>
+          <li>
+            <a
+              href="/project/details"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              aria-current={Astro.url.pathname === '/project/details'
+                ? 'page'
+                : undefined}
+            >
+              Technical Details
+            </a>
+          </li>
+          <li>
+            <a
+              href="/team"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              aria-current={Astro.url.pathname === '/team' ? 'page' : undefined}
+            >
+              Team
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Contact</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="mailto:k.gallagher@fct.unl.pt"
+              class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit our GitHub (opens in new tab)"
+            >
+              k.gallagher@fct.unl.pt</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w-1/8 mx-auto pt-8 border-t border-gray-200"></div>
+    <div class="w-full text-center text-gray-600">
+      <p>&copy; {new Date().getFullYear()} NOVA LINCS. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

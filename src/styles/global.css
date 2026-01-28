@@ -21,4 +21,8 @@
       Roboto,
       sans-serif;
   }
+
+  main {
+    min-height: 80vh;
+  }
 }
