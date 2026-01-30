@@ -1,6 +1,6 @@
 {
     "name": "parsec",
-    "compatibility_date": "2026-30-01", // Update to the day you deploy
+    "compatibility_date": "2026-01-30", // Update to the day you deploy
     "assets": {
         "directory": "./dist"
     }
