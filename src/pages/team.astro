@@ -7,25 +7,109 @@ const title = 'Team'
 
 const members = [
   {
-    name: 'Mike Ensley',
-    photo: 'https://dummyimage.com/200x200',
-    role: 'Researcher',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore voluptatibus',
-    contact: 'foo@example.com',
+    name: 'Kevin Gallagher',
+    photo: '/team/kevin_gallagher.jpeg',
+    title: 'Assistant Professor and Principal Investigator',
+    affiliation: 'NOVA FCT',
+    bio: 'Kevin Gallagher is an Assistant Professor in the Department of Computer Science in NOVA FCT and an integrated researcher in NOVA LINCS. His research interests include access control, anonymity, and privacy.',
   },
   {
-    name: 'Mike Ensley',
-    photo: 'https://dummyimage.com/200x200',
-    role: 'Researcher',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore voluptatibus',
-    contact: 'foo@example.com',
+    name: 'Santiago Torres',
+    photo: '/team/santiago_torres.jpg',
+    title: 'Assistant Professor',
+    affiliation: 'Purdue University',
+    bio: "Santiago is an Assistant Professor at Purdue's Electrical and Computer Engineering Department. His interests include binary analysis, cryptography, operating systems, and security-oriented software engineering. His current research focuses on securing the software development lifecycle, password storage mechanisms, and update systems. Santiago is a member of the Arch Linux security team and has contributed patches to F/OSS projects on various degrees of scale, including Git, the Linux Kernel, Reproducible Builds, NeoMutt, and the Briar project. Santiago is also the lead of the in-toto and Sigstore projects.",
   },
   {
-    name: 'Mike Ensley',
-    photo: 'https://dummyimage.com/200x200',
-    role: 'Researcher',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore voluptatibus',
-    contact: 'foo@example.com',
+    name: 'Alex Davidson',
+    photo: '/team/alex_davidson.jpg',
+    title: 'Assistant Professor',
+    affiliation: 'Faculdade de Ciências de Universidade de Lisboa',
+    bio: "Alex Davidson is an Assistant Professor in the Department of Computer Science at the Faculty of Sciences of the University of Lisbon, and an integrated researcher in the LASIGE research laboratory. His research focuses on the area of cryptography, where he models, designs, and implements technologies that strengthen the privacy of Internet users, with an emphasis on mechanisms that maintain security in the post-quantum era of computing. His work has already received academic distinctions, and has been translated into standardised Internet protocols and globally implemented communication mechanisms, reinforcing individuals' privacy and security guarantees.",
+  },
+  {
+    name: 'Nuno Preguiça',
+    photo: '/team/nuno_preguica.png',
+    title: 'Full Professor',
+    affiliation: 'NOVA FCT',
+    bio: 'Nuno Preguiça is Full Professor at DI FCT NOVA, and leads the Computer Systems group of the NOVA LINCS research lab. The broad aim of his research is to allow efficient and correct data sharing among geo-distributed users. He has participated in a number of national and EU projects. He co-invented CRDTs and received a Google Research Award for his work on solutions for cloud data management.',
+  },
+  {
+    name: 'Pedro Camponês',
+    photo: '/team/pedro_campones.jpg',
+    title: 'PhD Student',
+    affiliation: 'FCT NOVA',
+    bio: "Pedro Camponês is a PhD student in Computer Science and Engineering at the NOVA School of Science and Technology, NOVA University Lisbon, and a member of the Computer Systems Group at the NOVA Laboratory for Computer Science and Informatics (NOVA LINCS). Pedro's research focuses on Distributed System Dependability and Large Scale Distributed Systems. He holds an MSc in Computer Science and Engineering from NOVA University Lisbon (2022) and has published research papers in blockchain scalability, dependable machine learning systems, and efficient search in large networks.",
+  },
+  {
+    name: 'Hugo Pereira',
+    photo: '/team/hugo_pereira.jpg',
+    title: 'PhD Student',
+    affiliation: 'NOVA FCT',
+    bio: 'Hugo Pereira is a PhD student in Computer Science at the NOVA School of Science and Technology, NOVA University Lisbon, and a member of the Computer Systems Group at the NOVA Laboratory for Computer Science and Informatics (NOVA LINCS). His research focuses on network security, privacy-enhancing technologies, and trusted decentralized systems. He holds an MSc in Computer Science and Engineering, completed in November 2024, and a BSc in the same field, obtained in July 2022, both from NOVA University Lisbon. Within the Privocracy project at ParSec, and building on his expertise in privacy-preserving communications, Hugo co-devised the e-voting algorithm that underpins the access control mechanism, ensuring everlasting vote privacy while enabling auditability. This approach replaces high-privilege administrative actions by distributing authorization across multiple participants, thereby reducing trust concentration and the risk of system abuse.',
+  },
+  {
+    name: 'Adrian Persaud',
+    photo: '/person.jpg',
+    title: 'PhD Student',
+    affiliation: 'Purdue University',
+    bio: 'TBD',
+  },
+  {
+    name: 'Catarina Crespo',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Francisco Almeida',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Frederico Silva',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Ricardo Andrade',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Madalena Alves',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Bruno Duarte',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Vicente Ribeiro',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
+  },
+  {
+    name: 'Thiago Monteiro',
+    photo: '/person.jpg',
+    title: 'Master’s student',
+    affiliation: 'FCT NOVA',
+    bio: '',
   },
 ]
 ---
@@ -41,10 +125,10 @@ const members = [
   </p>
   <section class="text-gray-600 body-font">
     <div class="mx-auto">
-      <div class="flex justify-center -m-4">
+      <div class="flex flex-wrap -m-4">
         {
           members.map((member) => (
-            <div data-attribute="team-member" class="p-4 lg:w-1/4 md:w-1/2">
+            <div data-attribute="team-member" class="p-4 md:w-1/2 lg:w-1/4">
               <div class="h-full flex flex-col items-center text-center">
                 <img
                   alt={member.name}
@@ -52,19 +136,20 @@ const members = [
                   src={member.photo}
                 />
                 <div class="w-full">
-                  <h2 class="title-font font-medium text-lg text-gray-900">
+                  <h2 class="title-font font-medium text-xl text-gray-900">
                     {member.name}
                   </h2>
-                  <h3 class="text-gray-500 mb-3">{member.role}</h3>
+                  <h3 class="text-gray-700 text-lg">{member.title}</h3>
+                  <h4 class="text-gray-500 mb-3">{member.affiliation}</h4>
                   <p class="mb-4">{member.bio}</p>
-                  <span class="inline-flex">
+                  {/* <span class="inline-flex">
                     <a
                       href={`mailto:${member.contact}`}
                       class="text-xl text-gray-500"
                     >
                       <Icon name="mail" />
                     </a>
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </div>
