@@ -20,7 +20,7 @@ const title = 'Project Details'
     <br \><br \>
     However, we wished to ensure that different parliaments or city halls can easily
     integrate ParSec into their existing infrastructure.
-    <br \>
+    <br \><br \>
     To achieve this, we developed a new access control system called <b>Joint User
     Do (Judo)</b>. Judo is an access control mechanism built around two mandatory
     components: the Judo-Daemon and Voters. The Judo-Daemon exposes three API
@@ -29,7 +29,7 @@ const title = 'Project Details'
     be approved, while Execute performs the same authorization check and, if approved,
     carries it out. End users interact with the daemon either through a PAM module or
     through an application-level frontend process.
-    <br \>
+    <br \><br \>
     To determine whether a command should be approved, the Judo-Daemon forwards it to
     the Voters. Each Voter requests manual input from a designated user, who decides
     whether the command should proceed. If a sufficient majority of Voters approve the
@@ -38,7 +38,7 @@ const title = 'Project Details'
     learns only whether a majority was reached, and each Voter learns only its own user's
     vote. Critically, these guarantees hold even if some Voter instances behave maliciously
     and deviate from the protocol.
-    <br \>
+    <br \><br \>
     To maintain accountability, the Audit command enables controlled disclosure of individual
     votes for a previously submitted command. When the daemon receives an Audit request
     referencing a prior Authorize or Execute call, for instance, when a user disputes the
