@@ -50,11 +50,22 @@ const title = 'Project Details'
     type <code> judo systemctl restart payment-processor</code>. Nothing happens immediately.
     <br \><br \>
     Instead, you get a popup asking you to vote to approve or reject this command. The popup
-    includes the permissions required, the potential impact, and a risk assessment. With this
+    includes the permissions required, the potential impact, and a risk assessment.
+    <br \><br \>
+
+    <div class="w-full md:w-1/2">
+            <img src="/JudoVoteRequest.png" alt="Vote Popup" class="w-full rounded-lg" />
+    </div>
+
+    With this
     information at hand, you cast your vote, as do your colleagues. Every vote is cryprographically
     split into secret pieces, which are distributed to other voters' machines. No single piece can
     reveal how you voted. The pieces can only be reassembled once enough votes are in. This
-    guarantees your vote's privacy. Thus, your boss can't pressure you into approving something
+    guarantees your vote's privacy.
+    <div class="w-full md:w-1/2">
+            <img src="/FlowChart.png" alt="Flow Chart" class="w-full rounded-lg" />
+    </div>
+    Thus, your boss can't pressure you into approving something
     risky and then check how you voted, and an attacker who compromised an admin account cannot
     use that access to run malicious commands in the organization.<br \><br \>
 
